@@ -8,5 +8,8 @@
     "start": "babel-node index.js"
   },
   "author": "Saran Vellanki",
-  "license": "ISC"  
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.55.0"
+  }
 }
