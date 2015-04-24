@@ -1,7 +1,8 @@
-let request = require('request');
+let request = require('request')
+let fs = require('fs')
 let http = require('http')
 let argv = require('yargs')
-    .default('host', '127.0.0.1:8000')
+    .default('host', '127.0.0.1')
     .argv
 let scheme = 'http://'
 let port = argv.port || argv.host === '127.0.0.1' ? 8000 : 80
@@ -21,7 +22,7 @@ http.createServer((req, res) => {
 
 // Proxy Server
 http.createServer((req, res) => {
-    console.log(`Proxying request to: ${destinationUrl}`);
+    console.log(`Proxying request to: ${destinationUrl + req.url}`);
     //Logging the request headers in our server callback
     outputStream.write('\n\n\n' + JSON.stringify(req.headers))
     req.pipe(outputStream)
