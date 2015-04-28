@@ -1,7 +1,7 @@
 {
   "name": "proxyserver",
   "version": "1.0.0",
-  "description": "A proxy server with logging enabled. As a part of Codepath NodeJS pre-work",
+  "description": "A proxy server with logging enabled. As a part of Codepath Node.js pre-work",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
